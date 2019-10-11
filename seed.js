@@ -6,8 +6,9 @@ var connection = mysql.createConnection({
   host: 'localhost',
   user: 'student',
   password: 'student',
-  database: 'homes_you_may_like'
+  database: 'airbnb'
 });
+// database: 'homes_you_may_like'
 
 console.log(faker.name)
 connection.connect();
