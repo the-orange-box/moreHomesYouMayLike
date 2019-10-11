@@ -1,13 +1,8 @@
 // var data = require('./seed_data.js');
 var mysql = require('mysql');
 var faker = require('faker');
+var connection = require('mysql_connection.js');
 
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'student',
-  password: 'student',
-  database: 'airbnb'
-});
 // database: 'homes_you_may_like'
 
 console.log(faker.name)
