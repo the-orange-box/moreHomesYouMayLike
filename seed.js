@@ -12,27 +12,6 @@ connection.connect(function (err) {
   }
 });
 
-// INSERT INTO users (first_name, last_name, email, password, location, dept, is_admin, register_date) values ('Brad', 'Traversy', 'brad@gmail.com', '123456','Massachusetts', 'development', 1, now());
-
-
-// id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-// picture1 VARCHAR(250),
-// picture2 VARCHAR(250),
-// picture3 VARCHAR(250),
-// picture4 VARCHAR(250),
-// picture5 VARCHAR(250),
-// picture6 VARCHAR(250),
-// house_type ENUM('entire-place', 'private-room', 'hotel-room', 'shared-room'),
-// city VARCHAR(40) NOT NULL,
-// longtitude DOUBLE NOT NULL,
-// latitude DOUBLE NOT NULL,
-// house_title VARCHAR(160) NOT NULL,
-// max_guest_amount INT NOT NULL,
-// price_per_night INT NOT NULL,
-// rating FLOAT,
-// reviews_amount INT
-
-
 // this function is a helper function for the fake data
 // it's get no arguments and return a string as one of the four
 // option for housing types:
@@ -79,7 +58,7 @@ VALUES
     "${faker.lorem.sentence()}",
     "${Math.ceil((Math.random() * 16))}",
     "${Math.ceil((Math.random() * 600)) + 80}",
-    "${(Math.random() * 5)}",
+    "${(Math.random() * 5).toFixed(1)}",
     "${Math.ceil((Math.random() * 2000))}"
   )
 `;
@@ -126,7 +105,7 @@ VALUES
     "${faker.lorem.sentence()}",
     "${Math.ceil((Math.random() * 16))}",
     "${Math.ceil((Math.random() * 600)) + 80}",
-    "${(Math.random() * 5)}",
+    "${(Math.random() * 5).toFixed(1)}",
     "${Math.ceil((Math.random() * 2000))}"
   )
 `;
@@ -137,9 +116,6 @@ connection.query(sqlInsertCommand, function (err, result) {
     console.log(`Successfully ran this command: ${sqlInsertCommand}`);
   }
 });
-
-
-
 
 connection.end();
 // module.exports = connection;
