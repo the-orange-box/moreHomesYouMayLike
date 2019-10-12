@@ -1,5 +1,6 @@
 const express = require('express');
 var mysql = require('mysql');
+var path = require('path');
 var connection = require('../mysql_connection.js');
 connection.connect(function (err) {
   if (err) {
@@ -11,16 +12,13 @@ connection.connect(function (err) {
 
 const app = express();
 const PORT = 3030;
-console.log(`server connected`);
+console.log(`Server connected`);
 
-app.get('/', (req, res) => {
-  res.send('The server is working and listening to endpoint /');
-  express.static('../public');
-});
+// default endpoint rendering
+app.use('/', express.static(path.join(__dirname, '../public')))
 
+// retrive 3 random entries (houses) from the database
 app.get('/threeHousesYouMayLike', (req, res) => {
-  // res.send('The server is working and listening to endpoint /threeHousesYouMayLike');
-
   var sqlGetThreeRandomHouses = `SELECT * FROM houses ORDER BY RAND() LIMIT 3`;
   connection.query(sqlGetThreeRandomHouses, function (err, result) {
     if (err) {
