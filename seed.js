@@ -2,8 +2,6 @@ var mysql = require('mysql');
 var faker = require('faker');
 var connection = require('./mysql_connection.js');
 
-console.log(faker.fake("{{address.city}}"));
-
 connection.connect(function (err) {
   if (err) {
     console.log(err);
