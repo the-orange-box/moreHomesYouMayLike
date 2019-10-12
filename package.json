@@ -1,17 +1,27 @@
 {
-  "name": "",
-  "version": "",
+  "name": "homes_you_may_like",
+  "version": "1.0.0",
   "description": "",
-  "author": "",
+  "author": "Gal Weinstock",
   "license": "",
   "engines": {
-    "node": ">=6.13.0"
+    "node": ">=10.16.3"
   },
   "scripts": {
+    "seed-database": "node seed.js"
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "mysql": "^2.4.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "sequelize": "^5.19.6"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "nodemon": "^1.19.0",
+    "webpack": "^4.41.0"
   }
 }
