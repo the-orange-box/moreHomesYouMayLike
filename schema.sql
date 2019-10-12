@@ -13,7 +13,7 @@ CREATE TABLE houses (
   city VARCHAR(40) NOT NULL,
   longtitude DOUBLE NOT NULL,
   latitude DOUBLE NOT NULL,
-  house_title VARCHAR(40) NOT NULL,
+  house_title VARCHAR(160) NOT NULL,
   max_guest_amount INT NOT NULL,
   price_per_night INT NOT NULL,
   rating FLOAT,
