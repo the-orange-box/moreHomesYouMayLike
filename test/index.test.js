@@ -9,6 +9,7 @@ describe('Top react component unit testing', () => {
   describe('Rendering test', () => {
     test('It should render react component (the whole page)', () => {
       const wrapper = shallow(<App />);
+      expect(wrapper.exists()).toBe(true);
     });
   });
 });
