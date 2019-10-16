@@ -5,6 +5,8 @@ body {
 .house {
   position: relative;
   padding-right: 17px;
+  float: left;
+  width: 340px;
 }
 
 h2 {
