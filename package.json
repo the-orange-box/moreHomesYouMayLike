@@ -10,7 +10,8 @@
   "scripts": {
     "seed-database": "node seed.js",
     "start-server": "nodemon server/server.js",
-    "transpile-react": "npx webpack -d --watch"
+    "transpile-react": "npx webpack -d --watch",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.19.0",
