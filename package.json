@@ -8,7 +8,9 @@
     "node": ">=10.16.3"
   },
   "scripts": {
-    "seed-database": "node seed.js"
+    "seed-database": "node seed.js",
+    "start-server": "nodemon server/server.js",
+    "transpile-react": "npx webpack -d --watch"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -20,8 +22,15 @@
     "sequelize": "^5.19.6"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
     "nodemon": "^1.19.0",
-    "webpack": "^4.41.0"
+    "path": "^0.12.7",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
   }
 }
