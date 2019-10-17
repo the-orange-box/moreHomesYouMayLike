@@ -1,10 +1,6 @@
-// import indexApp from '../client/src/index.jsx';
-// import React from 'react';
-// import {shallow} from enzyme;
-const indexApp = require('../client/src/index.jsx');
-const App = require('../client/src/App.jsx');
-const React = require('react');
-const {shallow} = require('enzyme');
+import App from '../client/src/App.jsx';
+import React from 'react';
+import {shallow} from 'enzyme';
 
 describe('Top react component unit testing', () => {
   describe('Rendering test', () => {
