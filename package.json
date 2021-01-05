@@ -14,7 +14,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "mysql": "^2.4.2",
